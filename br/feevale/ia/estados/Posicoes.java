@@ -15,8 +15,7 @@ public enum Posicoes {
     private final Function<Integer, Integer> funcao;
 
     public boolean valido(int entrada) {
-        int a = calcular(entrada);
-        return a >= 0 && a <= 2;
+        return entrada >= 0 && entrada <= 2;
     }
 
     public int calcular(int entrada) {
