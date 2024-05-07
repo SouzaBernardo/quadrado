@@ -1,0 +1,25 @@
+package br.feevale.ia.estados;
+
+import java.util.function.Function;
+
+public enum Posicoes {
+    CIMA(linha -> linha - 1),
+    BAIXO(linha -> linha + 1),
+    DIREITA(coluna -> coluna + 1),
+    ESQUERDA(coluna -> coluna - 1);
+
+    Posicoes(Function<Integer, Integer> funcao) {
+        this.funcao = funcao;
+    }
+
+    private final Function<Integer, Integer> funcao;
+
+    public boolean valido(int entrada) {
+        int a = calcular(entrada);
+        return a >= 0 && a <= 2;
+    }
+
+    public int calcular(int entrada) {
+        return funcao.apply(entrada);
+    }
+}

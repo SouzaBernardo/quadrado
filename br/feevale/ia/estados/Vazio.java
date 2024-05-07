@@ -1,4 +1,4 @@
-package br.feevale.ia.quadrado;
+package br.feevale.ia.estados;
 
 public class Vazio {
 
